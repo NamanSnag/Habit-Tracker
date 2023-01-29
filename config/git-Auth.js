@@ -11,7 +11,6 @@ function(accessToken, refreshToken, profile, done) {
   console.log(profile)
   const email = `${profile.username}@gmail.com`;
   User.findOne({ email: email}, (err, user) => {
-    console.log("findOne")
     if(err){
       console.log("google",err);
     }
