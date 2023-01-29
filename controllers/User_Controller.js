@@ -71,9 +71,6 @@ module.exports.home = async (req, res) => {
         }
         });
         habits = await Habit.find({ user : req.user.id});
-        const currentTracking = habits.map(habit => {
-            return habit.tracking.filter(track => track.date === currentDate);
-        }); 
         return res.render('home',{
         habits : habits,
         });
