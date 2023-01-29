@@ -1,0 +1,84 @@
+@charset "UTF-8";
+.navigation {
+  height: 70px;
+  background: #a284fe;
+  box-shadow: #6a7ced 0px 10px 8px, rgba(71, 69, 69, 0.955) 0px -4px 10px, #135ec7 0px 8px 6px, #1957de 0px 8px 7px, #376fe7 0px -8px 5px;
+  animation: btnm 1s ease infinite;
+  position: fixed;
+  width: 100vw;
+  z-index: 10;
+  top: 0; }
+  .navigation #logo {
+    padding-left: 6vw;
+    float: left;
+    line-height: 80px;
+    font-size: 1.4em; }
+    .navigation #logo img {
+      height: 25px;
+      animation: icon 2s ease-in infinite; }
+    .navigation #logo a {
+      text-decoration: none;
+      color: black; }
+
+@keyframes icon {
+  0% {
+    height: 20px; }
+  25% {
+    height: 21px; }
+  50% {
+    height: 22px; }
+  75% {
+    height: 23px; }
+  100% {
+    height: 25px; } }
+      .navigation #logo a span {
+        font-size: 22px;
+        padding-left: 10px;
+        font-weight: 900;
+        letter-spacing: 2px; }
+      .navigation #logo a span:hover {
+        color: chartreuse; }
+
+@keyframes btnm {
+  0% {
+    box-shadow: #0a6dd6 0px 10px 8px, rgba(71, 69, 69, 0.955) 0px -4px 10px, #135ec7 0px 8px 6px, #1957de 0px 8px 7px, #376fe7 0px -8px 5px; }
+  25% {
+    box-shadow: #c20ad6 0px 10px 8px, rgba(142, 15, 142, 0.955) 0px -4px 10px, #135ec7 0px 18px 6px, #de19a0 0px 18px 7px, #e737c1 0px -12px 5px; }
+  50% {
+    box-shadow: #0ad640 0px 10px 8px, rgba(71, 69, 69, 0.955) 0px -4px 10px, #a9c713 0px 8px 6px, #19de23 0px 8px 7px, #37e7a9 0px -8px 5px; }
+  100% {
+    box-shadow: #0a6dd6 0px 10px 8px, rgba(71, 69, 69, 0.955) 0px -4px 10px, #135ec7 0px 8px 6px, #1957de 0px 8px 7px, #376fe7 0px -8px 5px; } }
+
+nav {
+  float: right;
+  margin-right: 1.2vw; }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; }
+    nav ul li {
+      float: left;
+      position: relative; }
+      nav ul li a {
+        display: block;
+        padding: 10px 6px 0 6px;
+        line-height: 60px;
+        font-size: 20px;
+        text-decoration: none;
+        color: black; }
+        nav ul li a::before {
+          transition: 300ms;
+          height: 5px;
+          content: "";
+          position: absolute;
+          background-color: red;
+          width: 0%;
+          bottom: 0px; }
+        nav ul li a:hover::before {
+          width: 70%; }
+        nav ul li a:not(:only-child):after {
+          padding-left: 4px;
+          content: ' ▾'; }
+      nav ul li a:hover {
+        color: aliceblue; }

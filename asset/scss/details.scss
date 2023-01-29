@@ -1,0 +1,49 @@
+.details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    table {
+    width: 80%;
+    border-collapse: collapse;
+    }
+    
+    th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    }
+    
+    th {
+    background-color: #ff0000;
+    color: aliceblue;
+    }
+    
+    .done {
+    background-color: green;
+    }
+    
+    .not-done {
+    background-color: red;
+    }
+    
+    .none {
+    background-color: yellow;
+    }
+    .back {
+        top: 100px;
+        right: 10px;
+        position: absolute;
+        button{
+            background-color: greenyellow;
+            border-radius: 2rem;
+            i{
+                font-weight: 900;
+            }
+        }
+        button:hover{
+            background-color: rgb(101, 100, 100);
+        }
+    }
+
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlQqLErTLNIxHp2ooUAvqijNmV2VUxJPFCqk0ZhYmVb7rhBlg&s">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- layout css -->
+    <link rel="stylesheet" href="/css/layout.css" type="text/css">
+    <!-- nav header css -->
+    <link rel="stylesheet" href="/css/header.css" type="text/css">
+    <!-- noty for notification -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+    <%- style %>
+    <title>HabTrack</title>
+</head>
+<body>
+    <%- include('_header') %>
+    <main>
+        <%- body %>
+    </main>
+
+    <%- script %>
+    <script>
+        <% if(flash.success && flash.success.length > 0){ %>
+            new Noty({
+                theme: 'relax',
+                text: '<%= flash.success %>',
+                type: 'success',
+                layout: 'topRight',
+                timeout: 1020
+            }).show();  
+         <% } %>
+         <% if(flash.error && flash.error.length > 0){ %>
+                new Noty({
+                theme: 'relax',
+                text: '<%= flash.error %>',
+                type: 'error',
+                layout: 'topRight',
+                timeout: 1020,
+            }).show();  
+        <% } %>
+    </script>
+</body>
+
+</html>

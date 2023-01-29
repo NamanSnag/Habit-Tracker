@@ -1,0 +1,104 @@
+.navigation {
+    height: 70px;
+    background: #a284fe;
+    box-shadow: rgb(106, 124, 237) 0px 10px 8px, 
+    rgba(71, 69, 69, 0.955) 0px -4px 10px, rgb(19, 94, 199) 0px 8px 6px, 
+    rgb(25, 87, 222) 0px 8px 7px, rgb(55, 111, 231) 0px -8px 5px;
+    animation: btnm 1s ease infinite;
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+    top: 0;
+    #logo{
+        padding-left: 6vw;
+        float: left;
+        line-height: 80px;
+        font-size: 1.4em;
+        img{
+          height: 25px;
+          animation: icon 2s ease-in infinite;
+        }
+        a{ 
+          text-decoration: none;
+          color: black;
+          @keyframes icon {
+            0%   {height: 20px;}
+            25%  {height: 21px}
+            50%  {height: 22px}
+            75%  {height: 23px}
+            100% {height: 25px}
+          }
+          span {
+            font-size: 22px;
+            padding-left: 10px;
+            font-weight: 900;
+            letter-spacing: 2px;
+          }
+          span:hover {
+            color: chartreuse;
+          }
+        }
+    }
+    @keyframes btnm {
+      0%   {box-shadow: rgb(10, 109, 214) 0px 10px 8px, 
+        rgba(71, 69, 69, 0.955) 0px -4px 10px, rgb(19, 94, 199) 0px 8px 6px, 
+        rgb(25, 87, 222) 0px 8px 7px, rgb(55, 111, 231) 0px -8px 5px;}
+
+        25%  {box-shadow: rgb(194, 10, 214) 0px 10px 8px, 
+          rgba(142, 15, 142, 0.955) 0px -4px 10px, rgb(19, 94, 199) 0px 18px 6px, 
+          rgb(222, 25, 160) 0px 18px 7px, rgb(231, 55, 193) 0px -12px 5px;}
+
+      50% {box-shadow: rgb(10, 214, 64) 0px 10px 8px, 
+        rgba(71, 69, 69, 0.955) 0px -4px 10px, rgb(169, 199, 19) 0px 8px 6px, 
+        rgb(25, 222, 35) 0px 8px 7px, rgb(55, 231, 169) 0px -8px 5px;}
+
+        100%   {box-shadow: rgb(10, 109, 214) 0px 10px 8px, 
+          rgba(71, 69, 69, 0.955) 0px -4px 10px, rgb(19, 94, 199) 0px 8px 6px, 
+          rgb(25, 87, 222) 0px 8px 7px, rgb(55, 111, 231) 0px -8px 5px;}
+    }
+  }
+
+  nav {
+    float: right;
+    margin-right: 1.2vw;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      li {
+        float: left;
+        position: relative;
+        a {
+          display: block;
+          padding: 10px 6px 0 6px;
+          line-height: 60px;
+          font-size: 20px;
+          text-decoration: none;
+          color: black;
+          
+           &::before {
+             transition: 300ms;
+             height: 5px;
+             content: "";
+             position: absolute;
+             background-color: rgb(255, 0, 0);
+             width: 0%;
+             bottom: 0px;
+          }
+  
+          &:hover::before{
+            width: 70%;
+          }
+          &:not(:only-child):after {
+            padding-left: 4px;
+            content: ' ▾';
+          }
+        } 
+        a:hover{
+          color: aliceblue;
+        }
+      }
+    }
+  }
+  

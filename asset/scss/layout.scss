@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgb(120, 111, 247);
+    height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }

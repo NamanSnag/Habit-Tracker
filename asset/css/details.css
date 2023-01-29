@@ -1,0 +1,32 @@
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+  .details table {
+    width: 80%;
+    border-collapse: collapse; }
+  .details th, .details td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center; }
+  .details th {
+    background-color: #ff0000;
+    color: aliceblue; }
+  .details .done {
+    background-color: green; }
+  .details .not-done {
+    background-color: red; }
+  .details .none {
+    background-color: yellow; }
+  .details .back {
+    top: 100px;
+    right: 10px;
+    position: absolute; }
+    .details .back button {
+      background-color: greenyellow;
+      border-radius: 2rem; }
+      .details .back button i {
+        font-weight: 900; }
+    .details .back button:hover {
+      background-color: #656464; }
