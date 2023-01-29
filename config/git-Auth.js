@@ -8,7 +8,6 @@ passport.use(new GitHubStrategy({
   callbackURL: "http://localhost:8000/user/auth/github/callback"
 },
 function(accessToken, refreshToken, profile, done) {
-  console.log(profile)
   const email = `${profile.username}@gmail.com`;
   User.findOne({ email: email}, (err, user) => {
     if(err){
@@ -20,7 +19,6 @@ function(accessToken, refreshToken, profile, done) {
           password: '123',
           name: profile.username
       });
-      console.log("created github")
       return done(null, user);
   }
     return done(err, user);

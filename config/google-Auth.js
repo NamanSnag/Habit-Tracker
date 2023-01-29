@@ -9,7 +9,6 @@ passport.use(new GoogleStrategy({
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOne({ email: profile.emails[0].value }, (err, user) => {
-      console.log("findOne")
       if(err){
         console.log("google",err);
       }
@@ -19,7 +18,6 @@ passport.use(new GoogleStrategy({
             password: '123',
             name: profile._json.name
         });
-        console.log("creat")
         return cb(null, user);
     }
       return cb(err, user);

@@ -8,6 +8,5 @@ main()
 .catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/habbit');
-  // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
+  await mongoose.connect('mongodb+srv://naman-123:Ynag123@cluster0.ewv2nsm.mongodb.net/habitDb');
 }
