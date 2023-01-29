@@ -1,6 +1,6 @@
 const Habit = require('../models/habit');
-const User = require('../models/user');
 
+// Add new habit
 module.exports.addHabit = async (req, res) => {
   try {
     const habit = await Habit.findOne({name: req.body.name});
@@ -23,6 +23,7 @@ module.exports.addHabit = async (req, res) => {
   }
 }
 
+// romove habit
 module.exports.removeHabit = async (req, res) => {
   try {
     const id = req.params.id;
@@ -33,6 +34,7 @@ module.exports.removeHabit = async (req, res) => {
   }
 }
 
+// 7day data details
 module.exports.details = async (req, res) => {
   try {
     if(req.isAuthenticated()) {
@@ -47,6 +49,7 @@ module.exports.details = async (req, res) => {
   }
 }
 
+// status update
 module.exports.updateStatus = async (req, res) => {
   try {
     const { habitId, id } = req.params;

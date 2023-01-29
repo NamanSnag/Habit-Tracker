@@ -1,5 +1,5 @@
 
-
+// landing page
 module.exports.landingPage = (req, res)=>{
     if (req.isAuthenticated()) {
         return res.render('home');

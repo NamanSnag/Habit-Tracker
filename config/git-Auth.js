@@ -2,6 +2,7 @@ const passport = require('passport');
 const User = require('../models/user');
 const GitHubStrategy = require('passport-github2').Strategy;
 
+// github login strategy
 passport.use(new GitHubStrategy({
   clientID: "adf1e4d400016ca3563c",
   clientSecret: "4c27ad0a2d3e38dbd395e97c1ec5f3d74be1182e",

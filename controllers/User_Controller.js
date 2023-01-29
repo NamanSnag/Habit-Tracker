@@ -1,6 +1,7 @@
 const User = require('../models/user');
 const Habit = require('../models/habit');
 
+// creating a new user
 module.exports.createUser = async (req, res) => {
     try {
         if(req.body.password != req.body.Confirm_password){
@@ -30,6 +31,7 @@ module.exports.createSession = async (req, res) => {
     return res.redirect('/user/home')
 }
 
+// sign In
 module.exports.SignIn = (req, res)=>{
     
     if (req.isAuthenticated()) {
@@ -37,7 +39,7 @@ module.exports.SignIn = (req, res)=>{
     }
     return res.render('Sign-In');
 }
-
+// sign Up
 module.exports.SignUp = (req, res)=>{
     if (req.isAuthenticated()) {
         return res.redirect('/user/signIn');
