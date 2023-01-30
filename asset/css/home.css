@@ -134,6 +134,12 @@
         color: white; }
       .center .habit-list .habit-list-item .habit:hover {
         color: #ff4800; }
+      .center .habit-list .habit-list-item .fa-minus-circle {
+        color: yellow; }
+      .center .habit-list .habit-list-item .fa-check-circle {
+        color: #09ff00; }
+      .center .habit-list .habit-list-item .fa-stop-circle {
+        color: red; }
       .center .habit-list .habit-list-item .status {
         border: 2px solid red;
         background-color: #59ff00;
