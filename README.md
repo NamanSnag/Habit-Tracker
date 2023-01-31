@@ -123,7 +123,3 @@ This code follows MVC pattern and hence everything is differentiated and well ma
 ```
 
 
-## Authors
-
-- [@Naman Nag](https://github.com/NamanSnag/Habit-Tracker)
-
