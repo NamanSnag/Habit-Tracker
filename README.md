@@ -2,6 +2,9 @@
 # 💪 H-Tracker(Habit Tracker)
 A simple web application to track your daily habits i.e. 💪 H-Tracker.
 
+## Authors
+
+- [@Naman Nag](https://github.com/NamanSnag/Habit-Tracker)
 
 ## Features
 
