@@ -1,5 +1,6 @@
 const express = require('express');
 const port = 8000;
+require('dotenv').config()
 const path = require('path');
 const app = express();
 const db = require('./config/mongoose');
@@ -9,6 +10,10 @@ const cookieParser = require('cookie-parser');
 const expressLayouts = require('express-ejs-layouts');
 const GoogleStrategy = require('./config/google-Auth');
 const GitHubStrategy = require('./config/git-Auth');
+const cors = require('cors');
+
+// cors
+app.use(cors());
 
 // view engine
 app.set('view engine', 'ejs');
